@@ -1,7 +1,8 @@
 # Simple makefile to build inih as a static library using g++
 
-SRC = ../ini.c
-OBJ = $(SRC:.c=.o)
+CSRC = ../ini.c
+CPPSRC = ../cpp/INIReader.cpp
+OBJ = $(CSRC:.c=.o) $(CPPSRC:.cpp=.o)
 OUT = libinih.a
 INCLUDES = -I..
 CCFLAGS = -g -O2
